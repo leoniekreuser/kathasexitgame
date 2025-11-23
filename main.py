@@ -22,3 +22,6 @@ elif (selection_user == "Schere ✂️" and selection_computer == "Papier 📄")
     st.write("You win!")
 else:
     st.write("Computer wins!")
+
+
+st.write("Was für ein tolles Spiel!")
