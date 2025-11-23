@@ -11,9 +11,10 @@ selection_user = st.selectbox("Choose an option:", ["Schere ✂️", "Stein 🪨
 selection_computer = random.choice(["Schere ✂️", "Stein 🪨", "Papier 📄"])
 
 st.write(f"You selected: {selection_user}")
-# st.write(f"Computer selected: {selection_computer}")
+
 # who wins?
 time.sleep(3)
+st.write(f"Computer selected: {selection_computer}")
 if selection_user == selection_computer:
     st.write("It's a tie!")
 elif (
