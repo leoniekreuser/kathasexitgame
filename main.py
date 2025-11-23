@@ -17,9 +17,10 @@ st.write("Willkommen zu deinem Exit Game! 🎉")
 
 st.write("Löse die Rätsel, um den Weg nach Hause zu finden. Viel Erfolg! 🍀")
 
-if st.button("Zum ersten Rätsel"):
-    st.session_state.page = "1"
-    st.switch_page(APP_DIR / "pages" / "raetsel1.py")
+for raetsel in ["1", "2"]:
+    if st.button(f"Zum {raetsel}. Rätsel"):
+        st.session_state.page = raetsel
+        st.switch_page(APP_DIR / "pages" / f"raetsel{raetsel}.py")
 
 # selection_user = st.selectbox("Choose an option:", ["Schere ✂️", "Stein 🪨", "Papier 📄"])
 # selection_computer = random.choice(["Schere ✂️", "Stein 🪨", "Papier 📄"])
