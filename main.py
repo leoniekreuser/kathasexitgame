@@ -25,3 +25,6 @@ else:
 
 
 st.write("Was für ein tolles Spiel!")
+
+
+print("ooo")
