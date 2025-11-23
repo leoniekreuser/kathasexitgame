@@ -1,2 +1,0 @@
-# kathasexitgame
-hello world
