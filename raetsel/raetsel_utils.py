@@ -3,8 +3,9 @@ from dotenv import load_dotenv
 import os
 from langchain_openai import AzureChatOpenAI
 from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
+from pathlib import Path
 
-from main import APP_DIR
+APP_DIR = Path(__file__).resolve().parent.parent
 
 # from raetsel.raetsel_texts import RAETSEL_1, SOLUTION_1, RAETSEL_2, SOLUTION_2
 
