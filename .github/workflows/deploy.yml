@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main   # löst beim Push auf main aus
+  workflow_dispatch:
 
 permissions:
   contents: read
