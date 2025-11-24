@@ -72,7 +72,7 @@ def display_chatbot(
         if isinstance(msg, AIMessage):
             st.chat_message(name, avatar=avatar).write(msg.content)
         elif isinstance(msg, HumanMessage):
-            st.chat_message("Katha").write(msg.content)
+            st.chat_message("Katha", avatar="🤓").write(msg.content)
 
     lui_prompt = st.chat_input(f"Sprich mit {header} und finde ihre Zahl heraus!")
     if lui_prompt:

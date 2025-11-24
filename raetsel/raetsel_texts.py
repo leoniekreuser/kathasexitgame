@@ -1,9 +1,19 @@
-RAETSEL_1 = """Der Weg nach Haus...\n
-Ohne Schuhe oft ein Graus. \n
-Ab ging die **Post**... \n
-Ohne **Geleiten** wär sie doch lost... \n
-Doch wo begann die Qual? \n
-Die quere Summe ergibt die **Zahl**..."""
+RAETSEL_1 = """Du findest einen geheimisvollen Zettel. <tbd>
+
+
+
+
+.
+
+
+
+
+.
+
+
+
+
+."""
 SOLUTION_1 = 26
 HINT_1_1 = """An welchem Ort verlor Lui ihre Schuhe? Die Lösung soll eine Zahl sein. Wie könnte man den Ort in eine Zahl umwandeln?"""
 HINT_1_2 = """Die fett gedruckten Wörter könnten wichtig sein. Was ergeben diese?"""
@@ -24,14 +34,18 @@ HINT_2_2 = """Das Datum "erster des sechsten" vor 9 Jahren könnte wichtig sein.
 HINT_2_3 = """Vielleicht hatte eine der Mädels eine "Idee" an diesem Tag? Schau mal in deren Social Media Profilen nach."""
 HINT_2_4 = """Es handelt sich um Jullis Profil. Such nach einem Post von ihr an diesem Datum."""
 
-RAETSEL_3 = """Im Hörsaal H15, der dich an Vorlesungen in Investition und Finanzierung erinnert, und der in der Zwischenzeit
-                ziemlich verfallen und modrig ist, findest Du einen seltsamen Bildschirm an der Wand.
-                Auf dem Bildschirm steht nichts weiter als:
+RAETSEL_3 = """
+            Im Hörsaal H15, in dem Du damals so viel Zeit verbracht hast, ist es genauso verfallen wie in den übrigen Teilen der Uni.
+            Du bist Dir nicht sicher, ob Du es Dir einbildest, aber Du hast das Gefühl, dass ein Hauch von Glühwein in der Luft liegt.
+            War das nicht diese lustige Investition-Vorlesung mit Prof. Sebastian?
 
-                "Du kommst hier nur weiter, wenn Du die vier geheimen Zahlen errätst,\n
-                die Deine Freundinnen Lauri, Lisi, Julli und Lui für Dich \n
-                hinterlassen haben. Jede von ihnen kann Dir Hinweise geben,\n
-                um ihre Zahl zu finden. Sprich mit ihnen, um die Hinweise\n
-                zu sammeln und die Zahlen zu entschlüsseln.
-                """
+            Wie oft hast Du dort Kaffee getrunken, um wach zu bleiben, nachdem Du die ganze Nacht im Sud-Club oder Da Silva verbracht hast?
+            Die hässlichen braunen Holzstühle knarren und quietschen immer noch genau so wie damals und an der verfallenen Tafel
+            siehst Du noch die Anweisungen vom Prüfungsamt Hendl, wie man sich in einer Prüfung zu verhalten hat.
+
+            In der Ecke des Hörsaals fällt Dir ein alter Computer auf. Ein bisschen verwundert bist Du schon, Du wusstest zwar, dass
+            die Uni Regensburg in vielerlei Hinsicht veraltet ist, aber dass sie tatsächlich noch so alte Computer benutzen!
+            Du näherst Dich dem Bildschirm, auf dem eine Nachricht flimmert. Der Text auf dem Bildschirm lautet:
+
+            """
 SOLUTION_3 = "lösung3"

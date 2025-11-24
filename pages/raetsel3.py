@@ -12,6 +12,8 @@ st.session_state.page = "3"
 
 page_config()
 display_raetsel(3, RAETSEL_3)
+st.image("./data/raetsel_3_computer.png")
+st.divider()
 configure_sidebar()
 
 cols = st.columns(5)
@@ -26,7 +28,7 @@ st.divider()
 st.write("Lauris Zahl: ")
 display_solution_box(155, key="3_lauri_solution")
 st.write("Lisis Zahl: ")
-display_solution_box(3953.80, key="3_lisi_solution")
+display_solution_box(5844.80, key="3_lisi_solution")
 st.write("Jullis Zahl: ")
 display_solution_box(32, key="3_julli_solution")
 st.write("Luis Zahl: ")

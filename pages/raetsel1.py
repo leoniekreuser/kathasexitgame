@@ -19,6 +19,11 @@ st.session_state.page = "1"
 
 page_config()
 configure_sidebar()
-display_raetsel(1, RAETSEL_1)
+
+col1, col2 = st.columns([4, 6])
+with col1:
+    display_raetsel(1, RAETSEL_1)
+with col2:
+    st.image("./data/raetsel_1_notiz.png")
 display_hints([HINT_1_1, HINT_1_2, HINT_1_3, HINT_1_4])
 display_solution_box(SOLUTION_1, key="solution_1")
