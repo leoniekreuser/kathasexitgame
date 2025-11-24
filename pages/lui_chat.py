@@ -18,6 +18,5 @@ display_chatbot(
     header="Lui",
     name="lui",
     avatar="👩‍🏫",
-    system_prompt=LUI_PROMPT,
     llm=LUI_LLM,
 )

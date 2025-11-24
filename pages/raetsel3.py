@@ -8,6 +8,8 @@ from raetsel.raetsel_utils import (
     page_config,
 )
 
+st.session_state.page = "3"
+
 page_config()
 display_raetsel(3, RAETSEL_3)
 configure_sidebar()

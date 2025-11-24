@@ -4,7 +4,7 @@ import streamlit as st
 from main import APP_DIR
 
 if "page" not in st.session_state:
-    st.session_state.page = "3"
+    st.session_state.page = "3.1"
 
 with st.sidebar:
     if st.button("Zurück in der Hörsaal H15"):

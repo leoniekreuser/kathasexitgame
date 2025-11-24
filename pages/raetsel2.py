@@ -15,8 +15,7 @@ from raetsel.raetsel_utils import (
     page_config,
 )
 
-if "page" not in st.session_state:
-    st.session_state.page = "2"
+st.session_state.page = "2"
 
 
 page_config()

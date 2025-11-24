@@ -15,8 +15,7 @@ from raetsel.raetsel_texts import (
     HINT_1_4,
 )
 
-if "page" not in st.session_state:
-    st.session_state.page = "1"
+st.session_state.page = "1"
 
 page_config()
 configure_sidebar()
