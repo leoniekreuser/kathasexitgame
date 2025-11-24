@@ -24,5 +24,14 @@ HINT_2_2 = """Das Datum "erster des sechsten" vor 9 Jahren könnte wichtig sein.
 HINT_2_3 = """Vielleicht hatte eine der Mädels eine "Idee" an diesem Tag? Schau mal in deren Social Media Profilen nach."""
 HINT_2_4 = """Es handelt sich um Jullis Profil. Such nach einem Post von ihr an diesem Datum."""
 
-RAETSEL_3 = """Rätsel 3 Text hier einfügen."""
+RAETSEL_3 = """Im Hörsaal H15, der dich an Vorlesungen in Investition und Finanzierung erinnert, und der in der Zwischenzeit
+                ziemlich verfallen und modrig ist, findest Du einen seltsamen Bildschirm an der Wand.
+                Auf dem Bildschirm steht nichts weiter als:
+
+                "Du kommst hier nur weiter, wenn Du die vier geheimen Zahlen errätst,\n
+                die Deine Freundinnen Lauri, Lisi, Julli und Lui für Dich \n
+                hinterlassen haben. Jede von ihnen kann Dir Hinweise geben,\n
+                um ihre Zahl zu finden. Sprich mit ihnen, um die Hinweise\n
+                zu sammeln und die Zahlen zu entschlüsseln.
+                """
 SOLUTION_3 = "lösung3"
