@@ -49,3 +49,11 @@ RAETSEL_3 = """
 
             """
 SOLUTION_3 = "lösung3"
+
+# Rätsel 4
+RAETSEL_4 = """..."""
+SOLUTION_4 = "149131515"
+HINT_4_1 = """TBD"""
+HINT_4_2 = """TBD"""
+HINT_4_3 = """TBD"""
+HINT_4_4 = """TBD"""

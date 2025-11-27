@@ -20,6 +20,6 @@ st.session_state.page = "2"
 
 page_config()
 configure_sidebar()
-display_raetsel(2, RAETSEL_2)
+display_raetsel(raetsel_id=2, raetsel_header="In der Wiwi Bib", raetsel_text=RAETSEL_2)
 display_hints([HINT_2_1, HINT_2_2, HINT_2_3, HINT_2_4])
-display_solution_box(SOLUTION_2, key="solution_2")
+display_solution_box(SOLUTION_2, key="2")

@@ -1,5 +1,3 @@
-from langchain_openai import AzureChatOpenAI
-from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
 from main import APP_DIR
 from raetsel.raetsel_prompts import LUI_PROMPT
 from raetsel.raetsel_utils import display_chatbot, get_llm

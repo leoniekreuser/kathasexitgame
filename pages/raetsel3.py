@@ -11,7 +11,7 @@ from raetsel.raetsel_utils import (
 st.session_state.page = "3"
 
 page_config()
-display_raetsel(3, RAETSEL_3)
+display_raetsel(raetsel_id=3, raetsel_header="Im H15", raetsel_text=RAETSEL_3)
 st.image("./data/raetsel_3_computer.png")
 st.divider()
 configure_sidebar()
@@ -26,10 +26,21 @@ for i, bot in enumerate(["lauri", "lisi", "julli", "lui", "leo"]):
 st.divider()
 
 st.write("Lauris Zahl: ")
-display_solution_box(155, key="3_lauri_solution")
+display_solution_box(155, key="3_lauri")
 st.write("Lisis Zahl: ")
-display_solution_box(5844.80, key="3_lisi_solution")
+display_solution_box(5844.80, key="3_lisi")
 st.write("Jullis Zahl: ")
-display_solution_box(32, key="3_julli_solution")
+display_solution_box(32, key="3_julli")
 st.write("Luis Zahl: ")
-display_solution_box(405, key="3_lui_solution")
+display_solution_box(405, key="3_lui")
+
+if all(
+    [
+        st.session_state.get("solved_3_lauri")
+        and st.session_state.get("solved_3_lisi")
+        and st.session_state.get("solved_3_julli")
+        and st.session_state.get("solved_3_lui")
+    ]
+):
+    st.success("Alle Zahlen gesammelt! Das Rätsel ist gelöst! 🎉")
+    st.session_state["solved_3"] = True

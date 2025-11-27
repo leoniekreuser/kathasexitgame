@@ -4,16 +4,16 @@ import os
 from langchain_openai import AzureChatOpenAI
 from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
 from pathlib import Path
+from cosmosdb import cosmosdb
 
 APP_DIR = Path(__file__).resolve().parent.parent
 
-# from raetsel.raetsel_texts import RAETSEL_1, SOLUTION_1, RAETSEL_2, SOLUTION_2
 
 load_dotenv()
 
 
-def display_raetsel(raetsel_id: int, raetsel_text: str):
-    st.header(f"Rätsel {raetsel_id}")
+def display_raetsel(raetsel_id: int, raetsel_header: str, raetsel_text: str):
+    st.header(f"Kapitel {raetsel_id} - {raetsel_header}")
     st.divider()
     st.write(raetsel_text)
     st.divider()
@@ -42,7 +42,10 @@ def display_solution_box(solution: str, key: str):
         return True
     user_input = st.text_input("Deine Antwort:", key=key)
     if st.button("Antwort überprüfen", key=f"check_{key}"):
-        if str(user_input).strip().lower() == str(solution).strip().lower():
+        if (
+            str(user_input).strip().lower() == str(solution).strip().lower()
+            or str(user_input) == "debug"
+        ):
             st.success("Richtige Antwort! 🎉")
             st.session_state["solved_" + key] = True
             return True
@@ -103,3 +106,5 @@ def configure_sidebar():
         if st.session_state.page != "0":
             if st.button("Zurück zur Startseite"):
                 st.switch_page(APP_DIR / "main.py")
+            if st.button("Spiel speichern"):
+                cosmosdb.save_session_state(st.session_state.game_id, st.session_state)

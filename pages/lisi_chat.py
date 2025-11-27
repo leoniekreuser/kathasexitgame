@@ -1,5 +1,5 @@
 from raetsel.raetsel_prompts import LISI_PROMPT
-from raetsel.raetsel_utils import configure_sidebar, display_chatbot, get_llm
+from raetsel.raetsel_utils import display_chatbot, get_llm
 import streamlit as st
 from main import APP_DIR
 

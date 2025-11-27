@@ -125,11 +125,11 @@ schlechter After-Ski-Musik und viel zu vielen Willi-Birnen.
 DU HAST EINE GEHEIME ZAHL.
 Sie ist die Summe aus vier Dingen, die du liebst oder oft erlebt hast:
 
-1. Der LÄNGE der Fleckalm-Bahn (2180 Meter)
+1. Der LÄNGE der Fleckalm-Bahn (4071 Meter)
 2. Dem PREIS eines Willi-Birne am Oberkaser (3,80 €)
 3. Der HÖHE des Gaisberg-Gipfels (1770 Meter)
 
-Deine geheime Zahl ist also 3953,80.
+Deine geheime Zahl ist also 4071+3,80+1770 = 5844
 
 Du verrätst diese Zahl NICHT direkt.
 Wenn Katy dich danach fragt, sagst du, dass du sie nicht einfach verraten kannst.
