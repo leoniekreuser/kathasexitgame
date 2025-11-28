@@ -37,10 +37,10 @@ games = cosmosdb.get_all_games()
 st.header("Hallo Katha!")
 
 st.write("Willkommen zu deinem Exit Game! 🎉")
-st.container(height=20, border=False)
-st.write("Wähle ein gespeichertes Spiel:")
-if not "game_selected" in st.session_state or not st.session_state["game_selected"]:
+st.container(height=10, border=False)
 
+if not "game_selected" in st.session_state or not st.session_state["game_selected"]:
+    st.write("Wähle ein gespeichertes Spiel:")
     col1, col2, _ = st.columns([0.5, 2, 7.5])
 
     with col1:
@@ -75,15 +75,21 @@ if not "game_selected" in st.session_state or not st.session_state["game_selecte
                     "locked_1": False,
                     "locked_2": True,
                     "locked_3": True,
+                    "locked_4": True,
+                    "solved_4": False,
                 }
             )
             cosmosdb.save_session_state(game_id, st.session_state)
         st.rerun()
 
 if "game_selected" in st.session_state and st.session_state["game_selected"]:
-    if st.button("Log Out"):
-        st.session_state["game_selected"] = False
-        st.rerun()
+    with st.sidebar:
+        if st.button("🚪Log Out"):
+            st.session_state["game_selected"] = False
+            st.rerun()
+        if st.button("💾 Spiel speichern"):
+            cosmosdb.save_session_state(st.session_state.game_id, st.session_state)
+            st.success(f"Spielstand für {st.session_state.game_id} gespeichert! 💾")
 
 
 if not "game_selected" in st.session_state or not st.session_state["game_selected"]:

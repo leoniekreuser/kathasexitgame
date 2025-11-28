@@ -30,6 +30,8 @@ IMPORTANT_KEYS = [
     "locked_1",
     "locked_2",
     "locked_3",
+    "solved_4",
+    "locked_4",
 ]
 
 

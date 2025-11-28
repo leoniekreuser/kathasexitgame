@@ -44,7 +44,7 @@ def display_solution_box(solution: str, key: str):
     if st.button("Antwort überprüfen", key=f"check_{key}"):
         if (
             str(user_input).strip().lower() == str(solution).strip().lower()
-            or str(user_input) == "debug"
+            or str(user_input) == "test"
         ):
             st.success("Richtige Antwort! 🎉")
             st.session_state["solved_" + key] = True
@@ -104,7 +104,8 @@ def page_config():
 def configure_sidebar():
     with st.sidebar:
         if st.session_state.page != "0":
-            if st.button("Zurück zur Startseite"):
+            if st.button("🏠 Zurück zur Startseite"):
                 st.switch_page(APP_DIR / "main.py")
-            if st.button("Spiel speichern"):
+            if st.button("💾 Spiel speichern", key=f"speichern_{st.session_state.page}"):
                 cosmosdb.save_session_state(st.session_state.game_id, st.session_state)
+                st.success(f"Spielstand für {st.session_state.game_id} gespeichert! 💾")
