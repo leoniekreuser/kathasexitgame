@@ -29,9 +29,9 @@ display_raetsel(
 )
 col1, col2 = st.columns([4.5, 5.5])
 with col1:
-    st.image("./data/raetsel_1_kugel.png", use_container_width=True)
+    st.image("./data/raetsel_1_kugel.png", width="stretch")
 with col2:
-    st.image("./data/raetsel_1_notiz.png", use_container_width=True)
+    st.image("./data/raetsel_1_notiz.png", width="stretch")
 display_hints([HINT_1_1, HINT_1_2, HINT_1_3, HINT_1_4])
 display_solution_box(SOLUTION_1, key="1")
 
@@ -39,7 +39,7 @@ if st.session_state.get("solved_1"):
     st.balloons()
     col1, col2 = st.columns([2, 8])
     with col1:
-        st.image("./data/raetsel_1_schluessel.png", use_container_width=True)
+        st.image("./data/raetsel_1_schluessel.png", width="stretch")
     with col2:
         st.write(SOLVED_1_TEXT)
         if st.button("Zur Wiwi Bib gehen"):

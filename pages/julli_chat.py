@@ -1,5 +1,11 @@
-from raetsel.raetsel_prompts import JULLI_PROMPT
-from raetsel.raetsel_utils import display_chatbot, get_llm
+from raetsel.raetsel_prompts import (
+    JULLI_PROMPT,
+    JULLI_HINT_1,
+    JULLI_HINT_2,
+    JULLI_HINT_3,
+    JULLI_HINT_4,
+)
+from raetsel.raetsel_utils import display_chatbot, get_llm, display_hints
 import streamlit as st
 from main import APP_DIR
 
@@ -9,6 +15,12 @@ if "page" not in st.session_state:
 with st.sidebar:
     if st.button("Zurück in der Hörsaal H15"):
         st.switch_page(APP_DIR / "pages" / "raetsel3.py")
+
+    st.divider()
+    display_hints(
+        ["julli hint 1", "julli hint 2", "julli hint 3", "julli hint 4"],
+        horizontal=False,
+    )
 
 
 JULLI_LLM = get_llm()

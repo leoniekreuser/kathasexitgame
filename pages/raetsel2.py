@@ -25,18 +25,18 @@ configure_sidebar()
 display_raetsel(raetsel_id=2, raetsel_header="In der Wiwi Bib", raetsel_text=RAETSEL_2)
 col1, col2 = st.columns([3.5, 6.5])
 with col1:
-    st.image("./data/raetsel_2_wiwibib.png", use_container_width=True)
+    st.image("./data/raetsel_2_wiwibib.png", width="stretch")
 with col2:
-    st.image("./data/raetsel_2_buch.png", use_container_width=True)
+    st.image("./data/raetsel_2_buch.png", width="stretch")
 
 display_hints([HINT_2_1, HINT_2_2, HINT_2_3, HINT_2_4])
 display_solution_box(SOLUTION_2, key="2")
 
-if st.session_state.get("solved_1"):
+if st.session_state.get("solved_2"):
     st.balloons()
     col1, col2 = st.columns([2, 8])
     with col1:
-        st.image("./data/raetsel_2_fenster.png", use_container_width=True)
+        st.image("./data/raetsel_2_fenster.png", width="stretch")
     with col2:
         st.write(SOLVED_2_TEXT)
         if st.button("Zum H15 gehen"):

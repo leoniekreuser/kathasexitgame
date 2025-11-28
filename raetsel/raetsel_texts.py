@@ -65,12 +65,17 @@ RAETSEL_3 = """
             Du näherst Dich dem Bildschirm, auf dem eine Nachricht flimmert. Der Text auf dem Bildschirm lautet:
 
             """
-SOLUTION_3 = "lösung3"
+SOLVED_3_TEXT = """Nachdem Du alle Zahlen erfolgreich eingegeben hast, flimmert der Bildschirm kurz und zeigt Dir eine neue Nachricht an:\n
+<> Du kennst Deine Freundinnen so gut, dass Du ihre geheimen Zahlen erraten konntest.\nBegib Dich nun zum Audimax, um den letzten Hinweis zu finden, der Dir den Weg nach draußen zeigt. </> \n"""
 
 # Rätsel 4
-RAETSEL_4 = """..."""
-SOLUTION_4 = "149131515"
-HINT_4_1 = """TBD"""
-HINT_4_2 = """TBD"""
-HINT_4_3 = """TBD"""
-HINT_4_4 = """TBD"""
+RAETSEL_4 = """Hach, der gute alte Audimax! Mit seinen roten Kinosesseln, der großen Bühne und der riesigen Wand, auf der früher die Folien der Professoren projiziert wurden.\n
+Die gemütlichen Sitze luden damals schon fast zum Einschlafen ein, besonders nach einem langen und wilden Bierpong-Turnier bei Dir zuhause
+am Dachauplatz...\n\n Aber genug in der Vergangenheit geschwelgt. Du möchtest nun endlich gerne wieder nach Hause. Du siehst Dich im Audimax um.
+Auf den ersten Blick siehst Du nichts, doch als Du zwischen den Reihen umhergehst, entdeckst Du auf dem Klapptisch eines der Sitze eine Kritzelei.
+Daneben liegt ein zusammengeknüllter Zettel, den Du vorsichtig entfaltest."""
+SOLUTION_4 = "897315"
+HINT_4_1 = """Die Fächer auf dem Stundenplan scheinen codiert zu sein. Was könnten die richtigen Bezeichnungen der Fächer sein?"""
+HINT_4_2 = """Cäsar-Verschlüsselung: Jeder Buchstabe wurde um 1 Stelle im Alphabet verschoben."""
+HINT_4_3 = """"Von Raum zu Raum", scheinbar sind die Räume der Fächer relevant. Räume bestehen aus Buchstaben und Zahlen - im Gedicht steht "am Ende bleibt die Zahl"."""
+HINT_4_4 = """"Von Tag zu Tag" - Es soll scheinbar etwas aneinandergereiht werden. Wie wäre es mit der chronologischen Reihenfolge der Räume?"""

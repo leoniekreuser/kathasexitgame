@@ -59,7 +59,11 @@ if not "game_selected" in st.session_state or not st.session_state["game_selecte
                 st.rerun()
     st.container(height=20, border=False)
     st.write("Oder starte ein neues Spiel:")
-    game_id = st.text_input(label="", placeholder="Gib eine neue Spiel-ID ein:")
+    game_id = st.text_input(
+        label="lbl",
+        placeholder="Gib eine neue Spiel-ID ein:",
+        label_visibility="hidden",
+    )
     if st.button("Neues Spiel starten"):
         if game_id in games:
             st.error("Diese Spiel-ID existiert bereits. Bitte wähle eine andere.")
@@ -72,6 +76,11 @@ if not "game_selected" in st.session_state or not st.session_state["game_selecte
                     "solved_1": False,
                     "solved_2": False,
                     "solved_3": False,
+                    "solved_3_lauri": False,
+                    "solved_3_lisi": False,
+                    "solved_3_julli": False,
+                    "solved_3_lui": False,
+                    "solved_3_leo": False,
                     "locked_1": False,
                     "locked_2": True,
                     "locked_3": True,

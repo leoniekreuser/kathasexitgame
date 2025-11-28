@@ -19,19 +19,28 @@ def display_raetsel(raetsel_id: int, raetsel_header: str, raetsel_text: str):
     st.divider()
 
 
-def display_hints(hints: list[str]):
-    anzahl_hints = len(hints)
-    if anzahl_hints == 0:
-        return
-    st.subheader("Hinweise")
-    # as many streamlit cols as anzahl_hints:
-    hint_cols = st.columns(anzahl_hints)
-    for idx, hint in enumerate(hints, start=1):
-        with hint_cols[idx - 1]:
-            with st.expander(f"💡 Hinweis {idx}"):
-                with st.expander(f"Wirklich anzeigen?"):
-                    st.write(hint)
-    st.divider()
+def display_hints(hints: list[str], horizontal: bool = False):
+    with st.sidebar:
+        st.divider()
+        anzahl_hints = len(hints)
+        if anzahl_hints == 0:
+            return
+        st.subheader("Hinweise")
+        # as many streamlit cols as anzahl_hints:
+        if horizontal:
+            hint_cols = st.columns(anzahl_hints)
+            for idx, hint in enumerate(hints, start=1):
+                with hint_cols[idx - 1]:
+                    with st.expander(f"💡 Hinweis {idx}"):
+                        with st.expander(f"Wirklich anzeigen?"):
+                            st.write(hint)
+        else:
+            for idx, hint in enumerate(hints, start=1):
+                with st.expander(f"💡 Hinweis {idx}"):
+                    with st.expander(f"Wirklich anzeigen?"):
+                        st.write(hint)
+
+        st.divider()
 
 
 def display_solution_box(solution: str, key: str):
@@ -103,6 +112,9 @@ def page_config():
 
 def configure_sidebar():
     with st.sidebar:
+        if "game_id" in st.session_state:
+            with st.container(border=True):
+                st.write("♥️ Aktuelles Spiel: " + st.session_state.game_id)
         if st.session_state.page != "0":
             if st.button("🏠 Zurück zur Startseite"):
                 st.switch_page(APP_DIR / "main.py")
