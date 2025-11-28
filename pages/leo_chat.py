@@ -26,7 +26,7 @@ LEO_LLM = get_llm()
 display_chatbot(
     header="Leo",
     name="leo",
-    avatar="⛷️",
+    avatar="👩‍🎨",
     system_prompt=LEO_PROMPT,
     llm=LEO_LLM,
 )
