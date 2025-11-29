@@ -28,7 +28,7 @@ JULLI_LLM = get_llm()
 display_chatbot(
     header="Julli",
     name="julli",
-    avatar="💃",
+    avatar="./data/julli_avatar.png",
     system_prompt=JULLI_PROMPT,
     llm=JULLI_LLM,
 )

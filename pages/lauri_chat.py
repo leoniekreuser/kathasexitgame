@@ -15,7 +15,7 @@ LAURI_LLM = get_llm()
 display_chatbot(
     header="Lauri",
     name="lauri",
-    avatar="🏃‍➡️",
+    avatar="./data/lauri_avatar.png",
     system_prompt=LAURI_PROMPT,
     llm=LAURI_LLM,
 )
