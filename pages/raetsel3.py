@@ -11,6 +11,7 @@ from raetsel.raetsel_utils import (
 st.session_state.page = "3"
 
 page_config()
+configure_sidebar()
 
 display_raetsel(raetsel_id=3, raetsel_header="Im H15", raetsel_text=RAETSEL_3)
 col1, col2 = st.columns([8, 2])
@@ -22,7 +23,6 @@ with col2:
             st.session_state.page = f"{bot}_chat"
             st.switch_page(APP_DIR / "pages" / f"{bot}_chat.py")
 
-configure_sidebar()
 
 st.divider()
 col1, col2, col3, col4, col5 = st.columns(5)
