@@ -286,3 +286,9 @@ Dein Ton:
 kreativ, warm, ein bisschen verträumt, detailverliebt,
 sehr fokussiert auf das Basteln, nicht auf Rätsel.
 """
+LEO_HINT_1 = """Leo scheint gerne von ihren FIMO-Figuren zu erzählen. Vielleicht sind diese wichtig."""
+LEO_HINT_2 = """Vielleicht sind die letzten Figuren, die Leo gemacht hat, relevant?"""
+LEO_HINT_3 = (
+    """Die Reihenfolge, in der Leo die Figuren gemacht hat, könnte wichtig sein."""
+)
+LEO_HINT_4 = """Die Reihenfolge gibt an, welche Ziffern du aneinanderreihen musst. Die Figuren haben alle eine bestimmte Form. Vielleicht könntest Du dadurch auf eine Zahl schließen?"""
