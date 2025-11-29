@@ -41,22 +41,21 @@ st.container(height=10, border=False)
 
 if not "game_selected" in st.session_state or not st.session_state["game_selected"]:
     st.write("Wähle ein gespeichertes Spiel:")
-    col1, col2, _ = st.columns([0.5, 2, 7.5])
-
-    with col1:
-        for game_id in games:
-            if st.button(f"🗑️", key=f"delete_{game_id}"):
-                cosmosdb.delete_game(game_id)
-                st.rerun()
-    with col2:
-        for game_id in games:
-            if st.button(game_id):
-                st.session_state["game_selected"] = True
-                st.session_state["game_id"] = game_id
-                existing_state = cosmosdb.retrieve_session_state(game_id)
-                if existing_state:
-                    st.session_state.update(existing_state)
-                st.rerun()
+    for game_id in games:
+        col1, col2, _ = st.columns([0.5, 2, 7.5])
+        with st.container():
+            with col1:
+                if st.button(f"🗑️", key=f"delete_{game_id}"):
+                    cosmosdb.delete_game(game_id)
+                    st.rerun()
+            with col2:
+                if st.button(game_id):
+                    st.session_state["game_selected"] = True
+                    st.session_state["game_id"] = game_id
+                    existing_state = cosmosdb.retrieve_session_state(game_id)
+                    if existing_state:
+                        st.session_state.update(existing_state)
+                    st.rerun()
     st.container(height=20, border=False)
     st.write("Oder starte ein neues Spiel:")
     game_id = st.text_input(
