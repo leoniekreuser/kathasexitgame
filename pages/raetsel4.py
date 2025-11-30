@@ -38,18 +38,20 @@ st.write("Gib die 6-stellige Nummer ein, um das Rätsel zu lösen:")
 cols = st.columns(6)
 for number in range(6):
     with cols[number]:
-        st.session_state["raetsel_4_number_" + str(number)] = st.number_input(
-            label="lbl",
-            step=1,
-            min_value=0,
-            max_value=9,
-            key=str(number),
-            label_visibility="hidden",
-        )
+        with st.form(key=f"raetsel_4_form_{number}"):
+            st.session_state["raetsel_4_number_" + str(number)] = st.number_input(
+                label="lbl",
+                step=1,
+                min_value=0,
+                max_value=9,
+                key=str(number),
+                label_visibility="hidden",
+            )
+            submitted = st.form_submit_button("Prüfen")
 
 number_mapping = {"0": 8, "1": 9, "2": 7, "3": 3, "4": 1, "5": 5}
 
-if st.button("Prüfen"):
+if submitted:
     points = 0
     for i in range(6):
         if st.session_state["raetsel_4_number_" + str(i)] == number_mapping[str(i)]:

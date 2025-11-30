@@ -5,7 +5,12 @@ from raetsel.raetsel_prompts import (
     LEO_HINT_3,
     LEO_HINT_4,
 )
-from raetsel.raetsel_utils import display_chatbot, get_llm, display_hints
+from raetsel.raetsel_utils import (
+    display_chatbot,
+    display_solution_box,
+    get_llm,
+    display_hints,
+)
 import streamlit as st
 from main import APP_DIR
 
@@ -15,8 +20,9 @@ if "page" not in st.session_state:
 with st.sidebar:
     if st.button("Zurück in der Hörsaal H15"):
         st.switch_page(APP_DIR / "pages" / "raetsel3.py")
-    st.divider()
     display_hints([LEO_HINT_1, LEO_HINT_2, LEO_HINT_3, LEO_HINT_4], horizontal=False)
+    st.write("Leos Zahl: ")
+    display_solution_box(5140, key="3_leo")
 
 
 LEO_LLM = get_llm()

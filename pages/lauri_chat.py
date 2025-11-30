@@ -1,5 +1,5 @@
 from raetsel.raetsel_prompts import LAURI_PROMPT
-from raetsel.raetsel_utils import display_chatbot, get_llm
+from raetsel.raetsel_utils import display_chatbot, display_solution_box, get_llm
 import streamlit as st
 from main import APP_DIR
 
@@ -9,6 +9,9 @@ if "page" not in st.session_state:
 with st.sidebar:
     if st.button("Zurück in der Hörsaal H15"):
         st.switch_page(APP_DIR / "pages" / "raetsel3.py")
+    st.divider()
+    st.write("Lauris Zahl: ")
+    display_solution_box(155, key="3_lauri")
 
 LAURI_LLM = get_llm()
 
